@@ -2,15 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 
 import classes from "./meal-item.module.css";
-import { Meal } from "./type";
+import { type Meal } from "@prisma/client";
+import { getUserById } from "../../../db/queries/users";
 
-export default function MealItem({
+export default async function MealItem({
   title,
   slug,
   image,
   summary,
-  creator,
+  userId,
 }: Meal) {
+  const creator = await getUserById(userId);
   return (
     <article className={classes.meal}>
       <header>
@@ -19,7 +21,7 @@ export default function MealItem({
         </div>
         <div className={classes.headerText}>
           <h2>{title}</h2>
-          <p>by {creator}</p>
+          <p>by {creator?.name}</p>
         </div>
       </header>
       <div className={classes.content}>

@@ -1,3 +1,5 @@
+import db from "../../prisma/seed";
+
 export const getMeals = async () => {
-  return [];
+  return db.meal.findMany()
 };

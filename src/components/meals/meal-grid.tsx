@@ -1,6 +1,6 @@
 import MealItem from "./meal-item";
 import classes from "./meals-grid.module.css";
-import { Meal } from "./type";
+import { type Meal } from "@prisma/client";
 type MealGridProps = {
   fetchData: () => Promise<Meal[]>;
 };
