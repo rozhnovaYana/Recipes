@@ -3,6 +3,8 @@ import Link from "next/link";
 import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/meal-grid";
 import { getMeals } from "../../../db/queries/meals";
+import { Suspense } from "react";
+import MealsLoading from "@/components/meals/meals-loading";
 
 export default function MealsPage() {
   return (
@@ -20,7 +22,9 @@ export default function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid fetchData={getMeals} />
+        <Suspense fallback={<MealsLoading />}>
+          <MealsGrid fetchData={getMeals} />
+        </Suspense>
       </main>
     </>
   );
