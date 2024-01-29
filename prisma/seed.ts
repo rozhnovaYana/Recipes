@@ -4,17 +4,16 @@ import { initData } from "./initData";
 const db = new PrismaClient();
 
 async function main() {
-  await db.user.upsert({
-    where: { email: "alice@prisma.io" },
-    update: {},
-    create: {
-      email: "alice@prisma.io",
-      name: "Alice",
-      meals: {
-        create: [...initData],
+  const responses = initData.map((item) =>
+    db.meal.upsert({
+      where: {
+        slug: item.slug,
       },
-    },
-  });
+      update: {},
+      create: item,
+    })
+  );
+  await Promise.all([...responses]);
 }
 main()
   .then(async () => {

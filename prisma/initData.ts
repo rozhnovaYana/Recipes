@@ -1,5 +1,7 @@
 export const initData = [
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Juicy Cheese Burger",
     slug: "juicy-cheese-burger",
     image: "/assets/burger.jpg",
@@ -20,6 +22,8 @@ export const initData = [
       `,
   },
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Spicy Curry",
     slug: "spicy-curry",
     image: "/assets/curry.jpg",
@@ -43,6 +47,8 @@ export const initData = [
       `,
   },
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Homemade Dumplings",
     slug: "homemade-dumplings",
     image: "/assets/dumplings.jpg",
@@ -63,6 +69,8 @@ export const initData = [
       `,
   },
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Classic Mac n Cheese",
     slug: "classic-mac-n-cheese",
     image: "/assets/macncheese.jpg",
@@ -86,6 +94,8 @@ export const initData = [
       `,
   },
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Authentic Pizza",
     slug: "authentic-pizza",
     image: "/assets/pizza.jpg",
@@ -106,6 +116,8 @@ export const initData = [
       `,
   },
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Wiener Schnitzel",
     slug: "wiener-schnitzel",
     image: "/assets/schnitzel.jpg",
@@ -126,6 +138,8 @@ export const initData = [
    `,
   },
   {
+    creator_email: "alice@prisma.io",
+    creator: "Alice",
     title: "Fresh Tomato Salad",
     slug: "fresh-tomato-salad",
     image: "/assets/tomato-salad.jpg",

@@ -1,5 +1,6 @@
 import ImagePicker from "@/components/image-picker/image-picker";
 import classes from "./page.module.css";
+import createRecipe from "@/actions/create-recipe";
 
 export default function ShareMealPage() {
   return (
@@ -11,7 +12,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form}>
+        <form className={classes.form} action={createRecipe}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>

@@ -41,6 +41,7 @@ export default function ImagePicker({
           name={name}
           ref={imagePicker}
           onChange={onInputChangeHandler}
+          required
         />
         <button
           className={classes.button}
