@@ -35,20 +35,11 @@ export default async function createRecipe(
 ): Promise<CreateMealState> {
   const slug =
     formData.get("title")?.toString().toLowerCase().replace(/\W/g, "-") || "";
-  // image uploading
   const image = formData.get("image");
-  let filename;
-  if (image instanceof File) {
-    const extension = image?.name?.split(".")[1];
-    filename = `${slug}.${extension}`;
-    const stream = fs.createWriteStream(`public/assets/${filename}`);
-    const buffer = await image.arrayBuffer();
-    stream.write(Buffer.from(buffer));
-  }
   const validData = schema.safeParse({
     slug,
     title: formData.get("title"),
-    image: filename,
+    image,
     summary: formData.get("summary"),
     instructions: xss(formData.get("instructions")?.toString() || ""),
     creator: formData.get("name"),
@@ -58,6 +49,16 @@ export default async function createRecipe(
     return {
       errors: validData.error.flatten().fieldErrors,
     };
+  }
+  // image uploading
+
+  let filename;
+  if (image instanceof File) {
+    const extension = image?.name?.split(".")[1];
+    filename = `${slug}.${extension}`;
+    const stream = fs.createWriteStream(`public/assets/${filename}`);
+    const buffer = await image.arrayBuffer();
+    stream.write(Buffer.from(buffer));
   }
   try {
     await db.meal.create({
