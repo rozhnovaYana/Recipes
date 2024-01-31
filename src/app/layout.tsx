@@ -20,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Provider>
-          <Header />
-          {children}
+          <main className="dark text-foreground">
+            <Header />
+            {children}
+          </main>
         </Provider>
       </body>
     </html>

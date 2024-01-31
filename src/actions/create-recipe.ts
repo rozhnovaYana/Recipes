@@ -30,6 +30,7 @@ interface CreateMealState {
 }
 
 export default async function createRecipe(
+  state: CreateMealState,
   formData: FormData
 ): Promise<CreateMealState> {
   const slug =

@@ -29,44 +29,20 @@
   max-width: 50rem;
 }
 
-.form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  color: #b3aea5;
-  font-weight: bold;
-}
-
-.form input,
-.form textarea {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  border: 1px solid #454952;
-  background: #1c2027;
-  font-size: 1.25rem;
-  font-family: "Montserrat", sans-serif;
-  color: #ddd6cb;
-}
-
-.form input:focus,
-.form textarea:focus {
-  outline-color: #f99f2a;
-  background-color: #1f252d;
-}
-
 .row {
   display: flex;
   gap: 1rem;
 }
 
-.row p {
+.row div {
   width: 100%;
 }
-
+.form label {
+  color: white !important;
+}
+.form input {
+  background-color: radial-gradient(#282c34, #282c34) !important;
+}
 .actions {
   text-align: right;
 }
@@ -82,6 +58,7 @@
   font: inherit;
   font-size: 1.25rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 150px;
 }
 
 .actions button:hover,
