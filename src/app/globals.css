@@ -28,7 +28,7 @@ header {
   height: 320px;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 svg {

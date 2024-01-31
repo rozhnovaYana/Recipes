@@ -1,3 +1,4 @@
+import { type Meal } from "@prisma/client";
 import db from "../../prisma/seed";
 
 export const getMeals = async () => db.meal.findMany();

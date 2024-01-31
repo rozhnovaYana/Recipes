@@ -5,13 +5,13 @@ import Image from "next/image";
 import classes from "./slideshow.module.css";
 
 const images = [
-  { image: "/images/burger.jpg", alt: "A delicious, juicy burger" },
-  { image: "/images/curry.jpg", alt: "A delicious, spicy curry" },
-  { image: "/images/dumplings.jpg", alt: "Steamed dumplings" },
-  { image: "/images/macncheese.jpg", alt: "Mac and cheese" },
-  { image: "/images/pizza.jpg", alt: "A delicious pizza" },
-  { image: "/images/schnitzel.jpg", alt: "A delicious schnitzel" },
-  { image: "/images/tomato-salad.jpg", alt: "A delicious tomato salad" },
+  { image: "/assets/burger.jpg", alt: "A delicious, juicy burger" },
+  { image: "/assets/curry.jpg", alt: "A delicious, spicy curry" },
+  { image: "/assets/dumplings.jpg", alt: "Steamed dumplings" },
+  { image: "/assets/macncheese.jpg", alt: "Mac and cheese" },
+  { image: "/assets/pizza.jpg", alt: "A delicious pizza" },
+  { image: "/assets/schnitzel.jpg", alt: "A delicious schnitzel" },
+  { image: "/assets/tomato-salad.jpg", alt: "A delicious tomato salad" },
 ];
 
 export default function Slideshow() {
