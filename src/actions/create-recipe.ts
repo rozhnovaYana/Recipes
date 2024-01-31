@@ -4,6 +4,7 @@ import { z } from "zod";
 import fs from "node:fs";
 import db from "../../prisma/seed";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 const schema = z.object({
   slug: z.string().min(3),
@@ -77,5 +78,6 @@ export default async function createRecipe(
       },
     };
   }
-  redirect("/");
+  revalidatePath("/meals");
+  redirect("/meals");
 }
